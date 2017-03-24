@@ -2,11 +2,12 @@
   "device-info": {
     "name": "Fronius Inverter",
     "kw": 27,
+    "type": "Inverter",
     "manufacturer": "Fronius",
     "model": "Fronius Eco 27.0-3-s"
   },
   "device-network": {
-    "ip": "192.168.0.10",
+    "ip": "203.59.95.40",
     "host": "",
     "location": "Australia, Perth",
     "time-zone": "AUS"

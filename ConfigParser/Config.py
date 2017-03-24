@@ -7,9 +7,11 @@ import sys
 import os
 import inspect
 import json
+import socket
 
 
 class ConfigParse(object):
+
     def __init__(self, config_file='inverter.json'):
         # ######### Check for proper file name ##########
         if len(config_file.split('.')) == 2:
@@ -24,6 +26,10 @@ class ConfigParse(object):
         if not os.path.exists(self.config_path):
             raise IOError('Can not find the config files path')
 
+        self.tags = ['device-info',
+                     'device-network',
+                     'device-registers']
+        self.allowed_types = ['meter', 'inverter']
         if config_file_type == 'xml':
             self._parse_xml(config_file)
         elif config_file_type == 'yml':
@@ -39,6 +45,32 @@ class ConfigParse(object):
     def data(self):
         return self._data
 
+    def verify(self):
+        for each in self.data:
+            if each in self.tags:
+                if each == 'device-info' and self.data[each]['type'].lower() not in self.allowed_types:
+                    raise TypeError('Device type is not supported')
+                elif each == 'device-network':
+                    self._verify_network(self.data[each])
+                elif each == 'device-registers':
+                    self._verify_registers(self.data[each])
+            else:
+                raise KeyError('{}:Illegal tag key in config file'.format(each))
+
+    def _verify_network(self, data):
+        if data['host'] == '':
+            print('No host info...Falling back to IP address')
+            try:
+                socket.gethostbyaddr(data['ip'])
+            except socket.herror:
+                raise socket.herror('Unable to access the remote device')
+        else:
+            print('Selecting the host address....')
+            # // TODO add the fallback when the host name is given
+
+    def _verify_registers(self, data):
+        pass
+
 
     def _parse_xml(self, config_file):
         pass
@@ -49,11 +81,11 @@ class ConfigParse(object):
 class DataMap(ConfigParse):
     pass
 
+
+#############################
 def main(configFile):
     config1 = ConfigParse(config_file=configFile)
-    # print(config1.data['device-info']['model'])
-    for each in config1.data:
-        print(each)
+    config1.verify()
 
 if __name__ == '__main__':
     main(configFile=sys.argv[1])
