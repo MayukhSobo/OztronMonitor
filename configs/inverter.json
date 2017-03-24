@@ -1,0 +1,244 @@
+{
+  "device-info": {
+    "name": "Fronius Inverter",
+    "kw": 27,
+    "manufacturer": "Fronius",
+    "model": "Fronius Eco 27.0-3-s"
+  },
+  "device-network": {
+    "ip": "192.168.0.10",
+    "host": "",
+    "location": "Australia, Perth",
+    "time-zone": "AUS"
+  },
+  "device-registers": {
+    "AC_Total_Current": {
+      "start": 40072,
+      "end": 40073,
+      "size": 2,
+      "R/W": "R",
+      "function-code": "0x03",
+      "name": "A",
+      "type": "float32",
+      "units": "A"
+    },
+    "AC_Phase_A_Current": {
+      "start": 40074,
+      "end": 40075,
+      "size": 2,
+      "R/W": "R",
+      "function-code": "0x03",
+      "name": "AphA",
+      "type": "float32",
+      "units": "A"
+    },
+    "AC_Phase_B_Current": {
+      "start": 40076,
+      "end": 40077,
+      "size": 2,
+      "R/W": "R",
+      "function-code": "0x03",
+      "name": "AphB",
+      "type": "float32",
+      "units": "A"
+    },
+    "AC_Phase_C_Current": {
+      "start": 40078,
+      "end": 40079,
+      "size": 2,
+      "R/W": "R",
+      "function-code": "0x03",
+      "name": "AphC",
+      "type": "float32",
+      "units": "A"
+    },
+
+    "AC_Phase_AB_Voltage": {
+      "start": 40080,
+      "end": 40081,
+      "size": 2,
+      "R/W": "R",
+      "function-code": "0x03",
+      "name": "PPVphAB",
+      "type": "float32",
+      "units": "V"
+    },
+    "AC_Phase_BC_Voltage": {
+      "start": 40082,
+      "end": 40083,
+      "size": 2,
+      "R/W": "R",
+      "function-code": "0x03",
+      "name": "PPVphBC",
+      "type": "float32",
+      "units": "V"
+    },
+    "AC_Phase_CA_Voltage": {
+      "start": 40084,
+      "end": 40085,
+      "size": 2,
+      "R/W": "R",
+      "function-code": "0x03",
+      "name": "PPVphCA",
+      "type": "float32",
+      "units": "V"
+    },
+    "AC_Phase_A_to_Neutral_Voltage": {
+      "start": 40086,
+      "end": 40087,
+      "size": 2,
+      "R/W": "R",
+      "function-code": "0x03",
+      "name": "PhVphA",
+      "type": "float32",
+      "units": "V"
+    },
+    "AC_Phase_B_to_Neutral_Voltage": {
+      "start": 40088,
+      "end": 40089,
+      "size": 2,
+      "R/W": "R",
+      "function-code": "0x03",
+      "name": "PhVphB",
+      "type": "float32",
+      "units": "V"
+    },
+    "AC_Phase_C_to_Neutral_Voltage": {
+      "start": 40090,
+      "end": 40091,
+      "size": 2,
+      "R/W": "R",
+      "function-code": "0x03",
+      "name": "PhVphC",
+      "type": "float32",
+      "units": "V"
+    },
+
+    "AC_Power": {
+      "start": 40092,
+      "end": 40093,
+      "size": 2,
+      "R/W": "R",
+      "function-code": "0x03",
+      "name": "W",
+      "type": "float32",
+      "units": "W"
+    },
+    "Apparent_Power": {
+      "start": 40096,
+      "end": 40097,
+      "size": 2,
+      "R/W": "R",
+      "function-code": "0x03",
+      "name": "VA",
+      "type": "float32",
+      "units": "VA"
+    },
+    "Reactive_Power": {
+      "start": 40098,
+      "end": 40099,
+      "size": 2,
+      "R/W": "R",
+      "function-code": "0x03",
+      "name": "VAr",
+      "type": "float32",
+      "units": "VAr"
+    },
+
+    "AC_Frequency": {
+      "start": 40094,
+      "end": 40095,
+      "size": 2,
+      "R/W": "R",
+      "function-code": "0x03",
+      "name": "Hz",
+      "type": "float32",
+      "units": "Hz"
+    },
+
+    "Power_Factor": {
+      "start": 40100,
+      "end": 40101,
+      "size": 2,
+      "R/W": "R",
+      "function-code": "0x03",
+      "name": "PF",
+      "type": "float32",
+      "units": "%"
+    },
+
+    "AC_Lifetime_Energy": {
+      "start": 40102,
+      "end": 40103,
+      "size": 2,
+      "R/W": "R",
+      "function-code": "0x03",
+      "name": "WH",
+      "type": "float32",
+      "units": "Wh"
+    },
+
+    "DC_Current": {
+      "start": 40104,
+      "end": 40105,
+      "size": 2,
+      "R/W": "R",
+      "function-code": "0x03",
+      "name": "DCA",
+      "type": "float32",
+      "units": "A"
+    },
+    "DC_Voltage": {
+      "start": 40106,
+      "end": 40107,
+      "size": 2,
+      "R/W": "R",
+      "function-code": "0x03",
+      "name": "DCV",
+      "type": "float32",
+      "units": "V"
+    },
+    "DC_Power": {
+      "start": 40108,
+      "end": 40109,
+      "size": 2,
+      "R/W": "R",
+      "function-code": "0x03",
+      "name": "DCW",
+      "type": "float32",
+      "units": "W"
+    },
+
+    "Cabinet_Temp": {
+      "start": 40110,
+      "end": 40111,
+      "size": 2,
+      "R/W": "R",
+      "function-code": "0x03",
+      "name": "TmpCab",
+      "type": "float32",
+      "units": "C"
+    },
+
+    "HeatSink_Temp": {
+      "start": 40112,
+      "end": 40113,
+      "size": 2,
+      "R/W": "R",
+      "function-code": "0x03",
+      "name": "TmpSnk",
+      "type": "float32",
+      "units": "C"
+    },
+    "Transformer_Temp": {
+      "start": 40114,
+      "end": 40115,
+      "size": 2,
+      "R/W": "R",
+      "function-code": "0x03",
+      "name": "TmmTms",
+      "type": "float32",
+      "units": "C"
+    }
+  }
+}
