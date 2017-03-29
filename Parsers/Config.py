@@ -39,6 +39,8 @@ class ConfigParse(ABC):
                      'device-network',
                      'device-registers']
         self.allowed_device_types = ['meter', 'inverter']
+        self.allowed_data_type = {'float32': 2}
+        self.function_codes = {'R': '0x03', 'RW': ['0x03', '0x06', '0x10']}
         ConfigParse.verify(self)
 
     @property
@@ -98,6 +100,33 @@ class ConfigParse(ABC):
         # time.sleep(1)
 
     def _verify_registers(self, data):
+
+        for metric, config in data.items():
+
+            # Perform register range check
+
+            if not 40001 <= config['start'] <= 40939:
+                raise ValueError('{}: Unsupported register start range'.format(metric))
+            if not 40001 <= config['end'] <= 40939:
+                raise ValueError('{}: Unsupported register end range'.format(metric))
+
+            # Perform data type VS size check
+
+            if config['type'] in self.allowed_data_type.keys():
+                if int(config['size']) != self.allowed_data_type[config['type']]:
+                    raise OverflowError('{}: Can not decode a {} type of {} size'.format(metric, config['type'],
+                                                                                         config['size']))
+            else:
+                raise TypeError('{}: Unsupported Data type'.format(metric))
+
+            # Perform R/W vs Function Code Check
+
+            if config['R/W'] in self.function_codes.keys():
+                if config['function-code'] != self.function_codes[config['R/W']]:
+                    raise AttributeError('{}: Function code {} is not supported by {} type register'.
+                                         format(metric, config['function-code'], config['R/W']))
+
+
         if Helpers.__VERBOSE__:
             print(colored("[OKAY✓]", "green", attrs=['bold']) + " Device Register Verification")
         # time.sleep(1)
