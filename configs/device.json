@@ -14,8 +14,8 @@
   },
   "device-registers": {
     "AC_Total_Current": {
-      "start": 40072,
-      "end": 40073,
+      "start": 40071,
+      "end": 40072,
       "size": 2,
       "R/W": "R",
       "function-code": "0x03",
@@ -24,8 +24,8 @@
       "units": "A"
     },
     "AC_Phase_A_Current": {
-      "start": 40074,
-      "end": 40075,
+      "start": 40073,
+      "end": 40074,
       "size": 2,
       "R/W": "R",
       "function-code": "0x03",
@@ -34,8 +34,8 @@
       "units": "A"
     },
     "AC_Phase_B_Current": {
-      "start": 40076,
-      "end": 40077,
+      "start": 40075,
+      "end": 40076,
       "size": 2,
       "R/W": "R",
       "function-code": "0x03",
@@ -44,8 +44,8 @@
       "units": "A"
     },
     "AC_Phase_C_Current": {
-      "start": 40078,
-      "end": 40079,
+      "start": 40077,
+      "end": 40078,
       "size": 2,
       "R/W": "R",
       "function-code": "0x03",
@@ -55,8 +55,8 @@
     },
 
     "AC_Phase_AB_Voltage": {
-      "start": 40080,
-      "end": 40081,
+      "start": 40079,
+      "end": 40080,
       "size": 2,
       "R/W": "R",
       "function-code": "0x03",
@@ -65,8 +65,8 @@
       "units": "V"
     },
     "AC_Phase_BC_Voltage": {
-      "start": 40082,
-      "end": 40083,
+      "start": 40081,
+      "end": 40082,
       "size": 2,
       "R/W": "R",
       "function-code": "0x03",
@@ -75,8 +75,8 @@
       "units": "V"
     },
     "AC_Phase_CA_Voltage": {
-      "start": 40084,
-      "end": 40085,
+      "start": 40083,
+      "end": 40084,
       "size": 2,
       "R/W": "R",
       "function-code": "0x03",
@@ -85,8 +85,8 @@
       "units": "V"
     },
     "AC_Phase_A_to_Neutral_Voltage": {
-      "start": 40086,
-      "end": 40087,
+      "start": 40085,
+      "end": 40086,
       "size": 2,
       "R/W": "R",
       "function-code": "0x03",
@@ -95,8 +95,8 @@
       "units": "V"
     },
     "AC_Phase_B_to_Neutral_Voltage": {
-      "start": 40088,
-      "end": 40089,
+      "start": 40087,
+      "end": 40088,
       "size": 2,
       "R/W": "R",
       "function-code": "0x03",
@@ -105,8 +105,8 @@
       "units": "V"
     },
     "AC_Phase_C_to_Neutral_Voltage": {
-      "start": 40090,
-      "end": 40091,
+      "start": 40089,
+      "end": 40090,
       "size": 2,
       "R/W": "R",
       "function-code": "0x03",
@@ -116,8 +116,8 @@
     },
 
     "AC_Power": {
-      "start": 40092,
-      "end": 40093,
+      "start": 40091,
+      "end": 40092,
       "size": 2,
       "R/W": "R",
       "function-code": "0x03",
@@ -126,8 +126,8 @@
       "units": "W"
     },
     "Apparent_Power": {
-      "start": 40096,
-      "end": 40097,
+      "start": 40093,
+      "end": 40094,
       "size": 2,
       "R/W": "R",
       "function-code": "0x03",
@@ -136,8 +136,8 @@
       "units": "VA"
     },
     "Reactive_Power": {
-      "start": 40098,
-      "end": 40099,
+      "start": 40095,
+      "end": 40096,
       "size": 2,
       "R/W": "R",
       "function-code": "0x03",
@@ -147,8 +147,8 @@
     },
 
     "AC_Frequency": {
-      "start": 40094,
-      "end": 40095,
+      "start": 40097,
+      "end": 40098,
       "size": 2,
       "R/W": "R",
       "function-code": "0x03",
@@ -158,8 +158,8 @@
     },
 
     "Power_Factor": {
-      "start": 40100,
-      "end": 40101,
+      "start": 40099,
+      "end": 40100,
       "size": 2,
       "R/W": "R",
       "function-code": "0x03",
@@ -169,8 +169,8 @@
     },
 
     "AC_Lifetime_Energy": {
-      "start": 40102,
-      "end": 40103,
+      "start": 40101,
+      "end": 40102,
       "size": 2,
       "R/W": "R",
       "function-code": "0x03",
@@ -180,8 +180,8 @@
     },
 
     "DC_Current": {
-      "start": 40104,
-      "end": 40105,
+      "start": 40103,
+      "end": 40104,
       "size": 2,
       "R/W": "R",
       "function-code": "0x03",
@@ -190,8 +190,8 @@
       "units": "A"
     },
     "DC_Voltage": {
-      "start": 40106,
-      "end": 40107,
+      "start": 40105,
+      "end": 40106,
       "size": 2,
       "R/W": "R",
       "function-code": "0x03",
@@ -200,8 +200,8 @@
       "units": "V"
     },
     "DC_Power": {
-      "start": 40108,
-      "end": 40109,
+      "start": 40107,
+      "end": 40108,
       "size": 2,
       "R/W": "R",
       "function-code": "0x03",
@@ -211,8 +211,8 @@
     },
 
     "Cabinet_Temp": {
-      "start": 40110,
-      "end": 40111,
+      "start": 40109,
+      "end": 40110,
       "size": 2,
       "R/W": "R",
       "function-code": "0x03",
@@ -222,8 +222,8 @@
     },
 
     "HeatSink_Temp": {
-      "start": 40112,
-      "end": 40113,
+      "start": 40111,
+      "end": 40112,
       "size": 2,
       "R/W": "R",
       "function-code": "0x03",
@@ -232,8 +232,8 @@
       "units": "C"
     },
     "Transformer_Temp": {
-      "start": 40114,
-      "end": 40115,
+      "start": 40113,
+      "end": 40114,
       "size": 2,
       "R/W": "R",
       "function-code": "0x03",
