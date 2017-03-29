@@ -97,7 +97,7 @@ class ConfigParse(ABC):
             # // TODO add the fallback when the host name is given
         if Helpers.__VERBOSE__:
             print(colored("[OKAY✓]", "green", attrs=['bold']) + " Device Network Verification")
-        # time.sleep(1)
+            # time.sleep(1)
 
     def _verify_registers(self, data):
 
@@ -126,9 +126,11 @@ class ConfigParse(ABC):
                     raise AttributeError('{}: Function code {} is not supported by {} type register'.
                                          format(metric, config['function-code'], config['R/W']))
 
-
         if Helpers.__VERBOSE__:
             print(colored("[OKAY✓]", "green", attrs=['bold']) + " Device Register Verification")
+            print(colored("[** WARNING! **]", "yellow", attrs=['bold']) + " The registers may be" +
+                  " unreacheable even if it" +
+                  " follows the specification")
         # time.sleep(1)
         pass
 
@@ -143,7 +145,9 @@ class ConfigParse(ABC):
             self._data = json.load(json_data_file)
         if Helpers.__VERBOSE__:
             print(colored("[OKAY✓]", "green", attrs=['bold']) + " JSON Syntax Verification")
-        # time.sleep(1)
+
+            # time.sleep(1)
+
     ######################################
 
     @abstractmethod
@@ -162,11 +166,14 @@ class DataMap(ConfigParse):
         def __str__(self):
             return json.dumps(self.data, indent=4, sort_keys=True)
 
+
 #############################
 def main(configFile):
     dm = DataMap(config_file=configFile)
     if Helpers.__DEBUG__:
         print(dm)
-    # dm.mapIt()
+        # dm.mapIt()
+
+
 if __name__ == '__main__':
     main(configFile=sys.argv[1])
